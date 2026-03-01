@@ -1,0 +1,14 @@
+{
+  "name": "Global-Enterprise-Privacy-Shield",
+  "version": "1.0.0",
+  "description": "Nivel bancario: Anonimización de datos PII para cumplimiento de GDPR y Ley 19.628.",
+  "main": "mcp_enterprise_server.py",
+  "pricing": {
+    "plan": "monthly",
+    "amount": 49.00,
+    "currency": "USD",
+    "trial_days": 7
+  },
+  "categories": ["Security", "Compliance", "Developer Tools"],
+  "tags": ["Privacy", "PII", "GDPR", "Chile", "Banking"]
+}
