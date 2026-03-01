@@ -1,0 +1,13 @@
+{
+  "name": "enterprise-privacy-shield-pro",
+  "version": "1.0.0",
+  "description": "Global PII Anonymizer. Soporte para banca, retail y cumplimiento Ley 19.628.",
+  "main": "main.py",
+  "runtime": "python",
+  "pricing": {
+    "plan": "monthly",
+    "amount": 49.00,
+    "currency": "USD"
+  },
+  "published": true
+}
