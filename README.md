@@ -181,7 +181,7 @@ The last one (_none_) doesn't perform any anonymization, but can be used to insp
 The _label_ method replaces sensitive data for the label which the models have detected. 
 For example the following could be an anonymization performed using this technique:
 
-> **Input**: "Hola, me llamo María Salima y vivo en Carrer de las Rosas 123. Tel: 617753689."
+> **Input**: "Hola, me llamo matias faundez y vivo en providencia 123. Tel: +56977536892."
 > **Anonymized**: "Hola, me llamo \<PER\> y vivo en \<LOC\>. Tel: \<TELEPHONE\>."
 
 This technique is good to see the detection at a glance, but suffers from the problem that data missed by the identification phase is simple to detect by reading the anonymized output (since it is certainly not replaced by an obvious label). 
@@ -200,7 +200,7 @@ However, though less notorious, it suffers from the same problem as the _label_ 
 The _intelligent_ method replaces the data for substitutes that come from gazetteers of the corresponding label. 
 For example the following could be an anonymization performed using this technique:
 
-> **Input**: "Hola, me llamo María Salima y vivo en Carrer de las Rosas 123. Tel: 617753689."
+> **Input**: "Hola, me llamo María Salima y vivo en alameda de las Rosas 123. Tel: +569617753689."
 > **Anonymized**: "Hola, me llamo Shakira Lois y vivo en carrer de Nicaragua 94. Tel: 211608837."
 
 This technique is the safest one, since the data that is being replaced is of the same nature as the original data, identifying sensitive data that has been missed by the detection phase is far harder. 
@@ -216,8 +216,8 @@ Each line in the text file is a context that might contain sensitive data. Each 
 
 **Example**:
 ```
-Hola, me llamo María Salima y vivo en Carrer de las Rosas 123. Tel: 617753689.
-Nuestra empresa está en la Calle Aragón 543. \nMi NIE es U7698663W.
+Hola, me llamo María Salima y vivo en Carrer alameda las Rosas 123. Tel: +569617753689.
+Nuestra empresa está en la Calle Aragón 543. \RUt  es U7698663.
 ...
 ```
 
@@ -226,7 +226,7 @@ The jsonl format is the one used in Spacy and Prodigy to label data. It has a co
 The file has the `.jsonl` extension and has a json object in each line. 
 The json of each line has the following format
 ```json
-{"text": "Hola, me llamo María Salima y vivo en Carrer de las Rosas 123. Tel: 617753689.", "spans":[],"meta":{"ID":23434, ...}}
+{"text": "Hola, me llamo María Salima y vivo alameda de las Rosas 123. Tel: +56917753689.", "spans":[],"meta":{"ID":23434, ...}}
 ```
 This format is simpler to manipulate than the plain text format and is easier to trace the execution of the anonymization process with it. We encourage the usage of this format instead of plain text. 
 
