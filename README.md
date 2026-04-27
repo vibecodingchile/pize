@@ -1,5 +1,5 @@
 # Anonymization pipeline
-The anonymization pipeline is a library for performing sensitive data identification and posterior anonymization of the detected data in Spanish and Catalan user generated plain text. 
+The anonymization pipeline is a library for performing sensitive data identification and posterior anonymization of the detected data in Spanish  user generated plain text. 
 
 The performance of the pipeline heavily depends on the models used during the sensitive data identification process and the techniques used for anonymization reduce in different ways the re-identification probability. 
 
